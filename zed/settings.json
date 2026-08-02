@@ -1,0 +1,456 @@
+{
+  "diff_view_style": "unified",
+  "cli_default_open_behavior": "existing_window",
+  "agent": {
+    "default_profile": "ask",
+    "default_model": {
+      "effort": "medium",
+      "provider": "openai-subscribed",
+      "model": "gpt-5.6-terra",
+      "enable_thinking": true
+    },
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Catppuccin Macchiato",
+    "dark": "Catppuccin Mocha"
+  },
+  "agent_servers": {
+    // Added globally: Codex ACP server
+    "grok-build": {
+      "type": "registry"
+    },
+    "codex-acp": {
+      "default_config_options": {
+        "model": "gpt-5.3-codex-spark"
+      },
+      "type": "registry",
+    },
+  },
+
+  "terminal": {
+    "font_family": "JetBrains Mono",
+    "font_size": 16,
+    "option_as_meta": true,
+  },
+
+  "ensure_final_newline_on_save": false,
+  "remove_trailing_whitespace_on_save": false,
+
+  // Global formatter is OFF.
+  // Formatting is enabled only for selected languages below.
+  "format_on_save": "off",
+
+  "session": {
+    "trust_all_worktrees": true,
+    "restore_unsaved_buffers": false,
+  },
+
+  "vim_mode": true,
+  "cursor_blink": false,
+  "relative_line_numbers": "enabled",
+
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
+
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "Catppuccin Mocha",
+  },
+
+  "file_scan_exclusions": [
+    "**/.git",
+    "**/.svn",
+    "**/.hg",
+    "**/node_modules",
+    "**/bower_components",
+    "**/dist",
+    "**/build",
+    "**/out",
+    "**/target",
+    "**/.next",
+    "**/.nuxt",
+    "**/.svelte-kit",
+    "**/.astro",
+    "**/__pycache__",
+    "**/.pytest_cache",
+    "**/.mypy_cache",
+    "**/.ruff_cache",
+    "**/.tox",
+    "**/.venv",
+    "**/venv",
+    "**/coverage",
+    "**/.coverage",
+    "**/.turbo",
+    "**/.cache",
+    "**/.DS_Store",
+  ],
+
+  "file_scan_inclusions": [
+    "**/.env",
+    "**/.env.local",
+    "**/.env.example",
+    "**/.env.development",
+    "**/.env.production",
+    "**/.env.test",
+  ],
+
+  "languages": {
+    "Python": {
+      // Python: formatter stays OFF globally.
+      // basedpyright = autocomplete/go-to-definition
+      // ruff = linting
+      "language_servers": ["basedpyright", "ruff"],
+
+      "formatter": {
+        "language_server": {
+          "name": "ruff",
+        },
+      },
+
+      "code_actions_on_format": {
+        "source.organizeImports.ruff": true,
+      },
+    },
+
+    "JavaScript": {
+      // Formatter ON for JS
+      "format_on_save": "on",
+      "prettier": {
+        "allowed": false,
+      },
+      "formatter": [
+        {
+          "language_server": {
+            "name": "oxfmt",
+          },
+        },
+        {
+          "code_action": "source.fixAll.oxc",
+        },
+      ],
+    },
+
+    "TypeScript": {
+      // Formatter ON for TS
+      "format_on_save": "on",
+      "prettier": {
+        "allowed": false,
+      },
+      "formatter": [
+        {
+          "language_server": {
+            "name": "oxfmt",
+          },
+        },
+        {
+          "code_action": "source.fixAll.oxc",
+        },
+      ],
+    },
+
+    "TSX": {
+      // Formatter ON for TSX
+      "format_on_save": "on",
+      "prettier": {
+        "allowed": false,
+      },
+      "formatter": [
+        {
+          "language_server": {
+            "name": "oxfmt",
+          },
+        },
+        {
+          "code_action": "source.fixAll.oxc",
+        },
+      ],
+    },
+
+    "CSS": {
+      // Formatter ON for CSS
+      "format_on_save": "on",
+      "prettier": {
+        "allowed": false,
+      },
+      "formatter": [
+        {
+          "language_server": {
+            "name": "oxfmt",
+          },
+        },
+      ],
+    },
+
+    "SCSS": {
+      // Formatter ON for SCSS
+      "format_on_save": "on",
+      "prettier": {
+        "allowed": false,
+      },
+      "formatter": [
+        {
+          "language_server": {
+            "name": "oxfmt",
+          },
+        },
+      ],
+    },
+
+    // "GraphQL": {
+    //   // Formatter ON for GraphQL
+    //   "format_on_save": "on",
+    //   "prettier": {
+    //     "allowed": false
+    //   },
+    //   "formatter": [
+    //     {
+    //       "language_server": {
+    //         "name": "oxfmt"
+    //       }
+    //     }
+    //   ]
+    // },
+
+    "Go": {
+      // Formatter ON for Go
+      "format_on_save": "on",
+      "formatter": {
+        "language_server": {
+          "name": "gopls",
+        },
+      },
+    },
+
+    "Rust": {
+      // Formatter ON for Rust
+      "format_on_save": "on",
+      "formatter": {
+        "language_server": {
+          "name": "rust-analyzer",
+        },
+      },
+    },
+
+    "Markdown": {
+      // Formatter ON for Markdown
+      // If oxfmt does not format Markdown in your Zed setup,
+      // remove this block or allow prettier for Markdown.
+      "format_on_save": "on",
+      "prettier": {
+        "allowed": false,
+      },
+      "formatter": [
+        {
+          "language_server": {
+            "name": "oxfmt",
+          },
+        },
+      ],
+    },
+
+    "MDX": {
+      // Formatter ON for MDX
+      "format_on_save": "on",
+      "prettier": {
+        "allowed": false,
+      },
+      "formatter": [
+        {
+          "language_server": {
+            "name": "oxfmt",
+          },
+        },
+      ],
+    },
+
+    "Dockerfile": {
+      // Formatter ON for Dockerfile
+      // Dockerfile formatting support depends on installed Zed extensions/LSP.
+      "format_on_save": "on",
+    },
+  },
+
+  "lsp": {
+    "basedpyright": {
+      "settings": {
+        "python": {
+          "analysis": {
+            // Only show diagnostics for opened files.
+            "diagnosticMode": "openFilesOnly",
+
+            // Cursor-like behavior: disables strict type errors.
+            "typeCheckingMode": "off",
+
+            "autoSearchPaths": true,
+            "useLibraryCodeForTypes": true,
+            "autoImportCompletions": true,
+          },
+        },
+
+        "basedpyright.analysis": {
+          "diagnosticMode": "openFilesOnly",
+          "typeCheckingMode": "off",
+          "autoSearchPaths": true,
+          "useLibraryCodeForTypes": true,
+          "autoImportCompletions": true,
+        },
+      },
+    },
+
+    "ruff": {
+      "initialization_options": {
+        "settings": {
+          "lineLength": 100,
+
+          "lint": {
+            // E = pycodestyle
+            // F = pyflakes
+            "select": ["E", "F"],
+
+            "ignore": [
+              "E501", // line too long
+              "E401", // multiple imports on one line
+              "F401", // imported but unused
+              "F811", // redefinition of unused import/name
+              // "F821", // undefined name
+              "F541", // f-string without placeholders
+            ],
+          },
+        },
+      },
+    },
+
+    "vtsls": {
+      "settings": {
+        "typescript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always",
+          },
+          "preferGoToSourceDefinition": true,
+        },
+        "javascript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always",
+          },
+          "preferGoToSourceDefinition": true,
+        },
+      },
+      "enable_lsp_tasks": true,
+    },
+
+    "oxlint": {
+      "initialization_options": {
+        "settings": {
+          // Use project oxlint config if present.
+          "configPath": null,
+
+          // Lint while typing.
+          "run": "onType",
+
+          // Allow nested configs.
+          "disableNestedConfig": false,
+
+          // Only apply safe fixes.
+          "fixKind": "safe_fix",
+
+          // Treat unused disable comments as errors.
+          "unusedDisableDirectives": "deny",
+        },
+      },
+    },
+
+    "oxfmt": {
+      "initialization_options": {
+        "settings": {
+          // Use project formatter config if present.
+          "fmt.configPath": null,
+
+          // Formatter runs on save for languages where format_on_save is on.
+          "run": "onSave",
+        },
+      },
+    },
+
+    "gopls": {
+      "settings": {
+        "gopls": {
+          // Go language server settings.
+          "staticcheck": true,
+          "gofumpt": true,
+        },
+      },
+    },
+
+    "rust-analyzer": {
+      "settings": {
+        "rust-analyzer": {
+          "cargo": {
+            "allFeatures": true,
+          },
+          "checkOnSave": true,
+          "check": {
+            "command": "clippy",
+          },
+        },
+      },
+    },
+  },
+
+  // Use shell/system PATH so Zed can find tools like poetry, ruff, go, cargo, node, etc.
+  "use_system_path_prompts": true,
+
+  "git_panel": {
+    "sort_by": "name",
+    "group_by": "staging",
+    "tree_view": true,
+    "dock": "right",
+  },
+
+  "project_panel": {
+    "dock": "right",
+    "hide_root": true,
+    "auto_fold_dirs": false,
+    "scrollbar": {
+      "show": "never",
+    },
+    "indent_guides": {
+      "show": "never",
+    },
+  },
+
+  "outline_panel": {
+    "dock": "right",
+    "default_width": 300,
+    "indent_guides": {
+      "show": "never",
+    },
+  },
+
+  "gutter": {
+    "min_line_number_digits": 0,
+    "folds": false,
+    "runnables": false,
+  },
+
+  "indent_guides": {
+    "enabled": false,
+  },
+
+  "selection_highlight": false,
+  "current_line_highlight": "none",
+  "show_whitespaces": "none",
+
+  // "multi_cursor_modifier": "cmd_or_ctrl",
+  "seed_search_query_from_cursor": "never",
+
+  "when_closing_with_no_tabs": "keep_window_open",
+  "close_on_file_delete": false,
+
+  "git": {
+    "git_gutter": "tracked_files",
+  },
+}

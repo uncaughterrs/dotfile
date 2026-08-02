@@ -1,0 +1,185 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      // Quick file finder, like Telescope find_files
+    },
+  },
+  {
+    "context": "Terminal",
+
+    "bindings": {
+      // Navigate from terminal to editor splits/panes
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-l": "workspace::ActivatePaneRight",
+    },
+  },
+  // {
+  //   "context": "SearchPanel",
+  //   "bindings": {
+  //     "n": "menu::SelectNext",
+  //     "shift-n": "menu::SelectPrevious",
+  //     "enter": "menu::Confirm"
+  //   }
+  // },
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      // Create new file/folder
+      "a": "project_panel::NewFile",
+
+      // Rename selected file/folder
+      "r": "project_panel::Rename",
+
+      // Delete selected file/folder
+      "d": "project_panel::Delete",
+
+      // Duplicate selected file/folder
+      "shift d": "project_panel::Duplicate",
+
+      // Copy selected file/folder
+      "c": "project_panel::Copy",
+
+      // Cut selected file/folder
+      "x": "project_panel::Cut",
+
+      // Paste into selected folder
+      "p": "project_panel::Paste",
+
+      // Reveal/open selected item
+      "enter": "project_panel::Open",
+      "o": "project_panel::Open",
+      "l": "project_panel::Open",
+      "h": "project_panel::CollapseSelectedEntry",
+
+      // Move around like Vim
+      "j": "menu::SelectNext",
+      "k": "menu::SelectPrevious",
+
+      // Close/toggle explorer
+      "escape": "workspace::ToggleRightDock",
+      "space e": "workspace::ToggleRightDock",
+
+      // Navigate from file explorer to editor splits/panes
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-l": "workspace::ActivatePaneRight",
+    },
+  },
+
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      // jk to escape insert mode
+      "j k": "vim::NormalBefore",
+    },
+  },
+
+  {
+    "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+    "bindings": {
+      // Workspace-style bindings in normal mode
+
+      // Split vertical, like Neovim :split
+      "space |": "pane::SplitRight",
+
+      // Split horizontal, like Neovim :split
+      "space -": "pane::SplitDown",
+
+      // Find files
+      "space f f": "file_finder::Toggle",
+
+      // Project search / live grep
+      "space f g": "pane::DeploySearch",
+
+      // Command palette
+      "space p": "command_palette::Toggle",
+
+      // Toggle file/project panel
+      "space e": "workspace::ToggleRightDock",
+      "space E": "workspace::ToggleLeftDock",
+
+      // Save file
+      "space w": "workspace::Save",
+
+      // Close current tab/buffer
+      "space q": "pane::CloseActiveItem",
+
+      // Toggle terminal focus
+      "ctrl `": "terminal_panel::ToggleFocus",
+
+      // New terminal
+      "space t t": "workspace::NewTerminal",
+
+      // Git panel
+      "space g p": "git_panel::ToggleFocus",
+
+      // Diagnostics panel
+      "space x x": "diagnostics::Deploy",
+
+      // Editor/LSP actions
+
+      // Format file
+      "space f m": "editor::Format",
+
+      // Go to definition
+      "g d": "editor::GoToDefinition",
+
+      // Go to declaration
+      "g D": "editor::GoToDeclaration",
+
+      // Go to implementation
+      "g i": "editor::GoToImplementation",
+
+      // Go to type definition
+      "g t": "editor::GoToTypeDefinition",
+
+      // Find references
+      "g r": "editor::FindAllReferences",
+
+      // Rename symbol
+      "space r n": "editor::Rename",
+
+      // Code actions
+      "space c a": "editor::ToggleCodeActions",
+
+      // Hover docs
+      "K": "editor::Hover",
+
+      // Diagnostics navigation
+      "[ d": "editor::GoToPreviousDiagnostic",
+      "] d": "editor::GoToDiagnostic",
+
+      // Navigate between editor splits like Neovim
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      
+      // Next / Prev in Search
+      "n": "search::SelectNextMatch",
+      "shift-n": "search::SelectPreviousMatch"
+    },
+  },
+
+  {
+    "context": "Editor && vim_mode == visual && !VimWaiting && !menu",
+    "bindings": {
+      // Code actions on selected text
+      "space c a": "editor::ToggleCodeActions",
+
+      // Format selected text/file
+      "space f m": "editor::Format",
+    },
+  },
+]
