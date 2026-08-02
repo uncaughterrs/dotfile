@@ -2,11 +2,8 @@ cagent/*
 configstore/*
 git/*
 github-copilot/*
-herdr/herdr-client.log
-herdr/herdr-server.log
-herdr/release-notes.json
-herdr/session.json
-herdr/.plugins.lock
+herdr/*
+!herdr/config.toml
 hunk/*
 kilo/*
 mole/*
@@ -15,5 +12,8 @@ opencode/*
 raycast/*
 raycast-x/*
 zed/*
+!zed/keymap.json
+!zed/settings.json
 .DS_Store
-tmux/.tmux
+tmux/*
+!tmux/tmux.conf
