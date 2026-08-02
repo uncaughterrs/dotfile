@@ -1,0 +1,18 @@
+onboarding = false
+
+[ui.toast]
+delivery = "terminal"
+
+[theme]
+name = "catppuccin"
+
+[session]
+resume_agents_on_restore = false
+
+[keys]
+prefix = "ctrl+s"
+split_horizontal = "prefix+minus"
+split_vertical = "prefix+="
+rename_tab = "prefix+comma"
+new_workspace = "prefix+n"
+next_tab = "prefix+shift+n"
