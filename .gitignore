@@ -16,3 +16,4 @@ raycast/*
 raycast-x/*
 zed/*
 .DS_Store
+tmux/.tmux
