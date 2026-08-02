@@ -1,0 +1,4 @@
+WRN 2026-08-01T21:49:18.634 ?.22278    server_start:197: Failed to start server: operation not permitted: /var/folders/wy/n2gf_33n2f560g48nm5c3bph0000gn/T/nvim.krishmakhijani/Cz8Z7A/nvim.22278.0
+WRN 2026-08-01T22:30:43.031 ?.37659    server_start:197: Failed to start server: operation not permitted: /var/folders/wy/n2gf_33n2f560g48nm5c3bph0000gn/T/nvim.krishmakhijani/gmtw6N/nvim.37659.0
+WRN 2026-08-01T22:30:49.411 ?.37735    server_start:197: Failed to start server: operation not permitted: /var/folders/wy/n2gf_33n2f560g48nm5c3bph0000gn/T/nvim.krishmakhijani/dxPkJz/nvim.37735.0
+WRN 2026-08-01T22:38:18.392 ?.44182    server_start:197: Failed to start server: operation not permitted: /var/folders/wy/n2gf_33n2f560g48nm5c3bph0000gn/T/nvim.krishmakhijani/YJgdgl/nvim.44182.0
