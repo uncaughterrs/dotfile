@@ -15,6 +15,8 @@ zed/*
 .DS_Store
 tmux/*
 !tmux/tmux.conf
+!tmux/statusline.conf
+!tmux/theme.conf
 # hunk — only track the wrapper and main config
 hunk/*
 !hunk/config.toml
