@@ -4,7 +4,8 @@ onboarding = false
 delivery = "terminal"
 
 [theme]
-name = "catppuccin"
+name = "terminal"
+# Using "terminal" so herdr follows Ghostty's exact Solarized Osaka ANSI palette
 
 [session]
 resume_agents_on_restore = false

@@ -1,0 +1,35 @@
+#!/usr/bin/env zsh
+# Custom hunk wrapper stored in ~/.config/hunk/
+# This file can be tracked in your dotfiles git repo.
+
+CONFIG_DIR="${HOME}/.config/hunk"
+
+# Read paths from config files (so the actual paths live in .config/hunk)
+if [[ -f "$CONFIG_DIR/hunk-binary" ]]; then
+  REAL_HUNK="$(cat "$CONFIG_DIR/hunk-binary" | tr -d '\n')"
+else
+  REAL_HUNK="~/hunk-extension/node_modules/.bin/hunk"
+fi
+
+if [[ -f "$CONFIG_DIR/extension" ]]; then
+  EXT_PATH="$(cat "$CONFIG_DIR/extension" | tr -d '\n')"
+else
+  EXT_PATH="~/hunk-extension/index.js"
+fi
+
+# No args or starts with a global flag → pass through
+if [[ $# -eq 0 || "$1" == -* ]]; then
+  exec "$REAL_HUNK" "$@"
+fi
+
+# Respect --no-extensions
+for arg in "$@"; do
+  if [[ "$arg" == "--no-extensions" ]]; then
+    exec "$REAL_HUNK" "$@"
+  fi
+done
+
+# Normal subcommand: insert --extension after it
+subcmd="$1"
+shift
+exec "$REAL_HUNK" "$subcmd" --extension "$EXT_PATH" "$@"

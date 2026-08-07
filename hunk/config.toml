@@ -1,0 +1,58 @@
+theme = "solarized-osaka"
+
+mode = "auto"
+line_numbers = true
+wrap_lines = true
+hunk_headers = true
+menu_bar = true
+agent_notes = false
+copy_decorations = false
+
+# Exact Solarized Osaka theme (matching Ghostty Solarized-Osaka + craftzdog/solarized-osaka.nvim)
+[themes.solarized-osaka]
+background = "#001419"
+panel = "#001419"
+panelAlt = "#063540"
+border = "#063540"
+
+accent = "#29a298"
+accentMuted = "#002c38"
+
+text = "#9eabac"
+muted = "#637981"
+
+# Diff colors (Osaka green/yellow/red)
+addedBg = "#0d2a0d"
+removedBg = "#2a0d0d"
+addedContentBg = "#0a220a"
+removedContentBg = "#220a0a"
+addedSignColor = "#849900"
+removedSignColor = "#db302d"
+
+badgeAdded = "#849900"
+badgeRemoved = "#db302d"
+badgeNeutral = "#b28500"
+
+fileNew = "#849900"
+fileModified = "#b28500"
+fileDeleted = "#db302d"
+fileRenamed = "#268bd3"
+
+# Line numbers & selection
+lineNumberBg = "#001419"
+lineNumberFg = "#576d74"
+selectedHunk = "#002c38"
+
+# Notes / agent comments
+noteBorder = "#b28500"
+noteBackground = "#002c38"
+noteTitleBackground = "#063540"
+noteTitleText = "#b28500"
+
+# Basic syntax colors (Osaka style)
+syntaxDefault = "#9eabac"
+syntaxComment = "#576d74"
+syntaxKeyword = "#268bd3"
+syntaxString = "#849900"
+syntaxNumber = "#b28500"
+syntaxFunction = "#29a298"

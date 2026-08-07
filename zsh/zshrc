@@ -106,8 +106,9 @@ autoload -Uz compinit
 compinit
 # End of Docker CLI completions
 
-# Added by Antigravity
-export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
 
 # kilo
 export PATH=$HOME/.kilo/bin:$PATH
+
+# hunk
+export PATH="$HOME/.config/hunk/bin:$PATH"

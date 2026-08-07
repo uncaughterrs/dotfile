@@ -4,7 +4,6 @@ git/*
 github-copilot/*
 herdr/*
 !herdr/config.toml
-hunk/*
 kilo/*
 mole/*
 op/*
@@ -16,3 +15,9 @@ zed/*
 .DS_Store
 tmux/*
 !tmux/tmux.conf
+# hunk — only track the wrapper and main config
+hunk/*
+!hunk/config.toml
+!hunk/bin/
+!hunk/bin/hunk
+!hunk/index.js
