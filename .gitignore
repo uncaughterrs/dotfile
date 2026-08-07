@@ -13,6 +13,9 @@ zed/*
 !zed/keymap.json
 !zed/settings.json
 .DS_Store
+*.log
+*.bak
+*.bak.*
 tmux/*
 !tmux/tmux.conf
 !tmux/statusline.conf
