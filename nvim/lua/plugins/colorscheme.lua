@@ -1,19 +1,33 @@
 return {
-  -- Solarized Osaka (recommended over Cursor Dark for long coding sessions)
   {
-    "craftzdog/solarized-osaka.nvim",
+    "catppuccin/nvim",
+    name = "catppuccin",
     lazy = false,
     priority = 1000,
     opts = {
+      flavour = "mocha",
       transparent = false,
-      terminal_colors = true,
-      styles = {
-        comments = { italic = true },
-        keywords = { italic = true },
-        functions = {},
-        variables = {},
-        sidebars = "dark",
-        floats = "dark",
+      term_colors = true,
+      integrations = {
+        cmp = true,
+        gitsigns = true,
+        nvimtree = true,
+        treesitter = true,
+        notify = true,
+        mini = true,
+        which_key = true,
+        mason = true,
+        telescope = { enabled = true },
+        noice = true,
+        native_lsp = {
+          enabled = true,
+          underlines = {
+            errors = { "undercurl" },
+            hints = { "undercurl" },
+            warnings = { "undercurl" },
+            information = { "undercurl" },
+          },
+        },
       },
     },
   },
@@ -21,7 +35,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "solarized-osaka",
+      colorscheme = "catppuccin",
     },
   },
 }

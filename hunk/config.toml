@@ -1,4 +1,4 @@
-theme = "solarized-osaka"
+theme = "catppuccin-mocha"
 
 mode = "auto"
 line_numbers = true
@@ -8,51 +8,46 @@ menu_bar = true
 agent_notes = false
 copy_decorations = false
 
-# Exact Solarized Osaka theme (matching Ghostty Solarized-Osaka + craftzdog/solarized-osaka.nvim)
-[themes.solarized-osaka]
-background = "#001419"
-panel = "#001419"
-panelAlt = "#063540"
-border = "#063540"
+[themes.catppuccin-mocha]
+background = "#1e1e2e"
+panel = "#181825"
+panelAlt = "#11111b"
+border = "#313244"
 
-accent = "#29a298"
-accentMuted = "#002c38"
+accent = "#cba6f7"
+accentMuted = "#45475a"
 
-text = "#9eabac"
-muted = "#637981"
+text = "#cdd6f4"
+muted = "#a6adc8"
 
-# Diff colors (Osaka green/yellow/red)
-addedBg = "#0d2a0d"
-removedBg = "#2a0d0d"
-addedContentBg = "#0a220a"
-removedContentBg = "#220a0a"
-addedSignColor = "#849900"
-removedSignColor = "#db302d"
+addedBg = "#1e2d1e"
+removedBg = "#2d1e1e"
+addedContentBg = "#1a261a"
+removedContentBg = "#261a1a"
+addedSignColor = "#a6e3a1"
+removedSignColor = "#f38ba8"
 
-badgeAdded = "#849900"
-badgeRemoved = "#db302d"
-badgeNeutral = "#b28500"
+badgeAdded = "#a6e3a1"
+badgeRemoved = "#f38ba8"
+badgeNeutral = "#f9e2af"
 
-fileNew = "#849900"
-fileModified = "#b28500"
-fileDeleted = "#db302d"
-fileRenamed = "#268bd3"
+fileNew = "#a6e3a1"
+fileModified = "#f9e2af"
+fileDeleted = "#f38ba8"
+fileRenamed = "#89b4fa"
 
-# Line numbers & selection
-lineNumberBg = "#001419"
-lineNumberFg = "#576d74"
-selectedHunk = "#002c38"
+lineNumberBg = "#181825"
+lineNumberFg = "#6c7086"
+selectedHunk = "#313244"
 
-# Notes / agent comments
-noteBorder = "#b28500"
-noteBackground = "#002c38"
-noteTitleBackground = "#063540"
-noteTitleText = "#b28500"
+noteBorder = "#f9e2af"
+noteBackground = "#313244"
+noteTitleBackground = "#45475a"
+noteTitleText = "#f9e2af"
 
-# Basic syntax colors (Osaka style)
-syntaxDefault = "#9eabac"
-syntaxComment = "#576d74"
-syntaxKeyword = "#268bd3"
-syntaxString = "#849900"
-syntaxNumber = "#b28500"
-syntaxFunction = "#29a298"
+syntaxDefault = "#cdd6f4"
+syntaxComment = "#6c7086"
+syntaxKeyword = "#cba6f7"
+syntaxString = "#a6e3a1"
+syntaxNumber = "#fab387"
+syntaxFunction = "#89b4fa"
